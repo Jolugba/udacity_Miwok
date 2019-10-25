@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">udacity_Miwok</string>
+    <string name="app_name">Miwok</string>
     <!-- Category name for phrases [CHAR LIMIT=20] -->
     <string name="category_phrases">Phrases</string>
 
