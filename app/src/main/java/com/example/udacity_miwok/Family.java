@@ -37,7 +37,7 @@ public class Family extends AppCompatActivity {
 
 
         WordAdapter adapter=
-                new WordAdapter(this,listOfNumbers);
+                new WordAdapter(this,listOfNumbers,R.color.category_family);
         listView.setAdapter(adapter);
 
     }

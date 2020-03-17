@@ -32,7 +32,7 @@ public class Phrases extends AppCompatActivity {
 
 
         WordAdapter adapter=
-                new WordAdapter(this,listOfNumbers);
+                new WordAdapter(this,listOfNumbers,R.color.category_phrases);
         listView.setAdapter(adapter);
     }
 }

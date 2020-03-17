@@ -11,18 +11,22 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.core.content.ContextCompat;
 
 import java.util.ArrayList;
 
 //
 public class WordAdapter extends ArrayAdapter<Word> {
 
-    public WordAdapter(Context context, ArrayList<Word> languageTranslanlation) {
+    private int mColourResourceID;
+
+    public WordAdapter(Context context, ArrayList<Word> languageTranslanlation,int colourResourceID) {
         // Here, we initialize the ArrayAdapter's internal storage for the context and the list.
         // the second argument is used when the ArrayAdapter is populating a single TextView.
         // Because this is a custom adapter for two TextViews and an ImageView, the adapter is not
         // going to use this second argument, so it can be any value. Here, we used 0.
         super(context, 0, languageTranslanlation);
+        mColourResourceID=colourResourceID;
     }
 
     @NonNull
@@ -57,7 +61,17 @@ public class WordAdapter extends ArrayAdapter<Word> {
 
         // Get the image resource ID from the current Word object and
         // set the image to iconView
+        if (currentWordTranslation.hasImage()){
        iconView.setImageResource(currentWordTranslation.getmImageResources());
+       iconView.setVisibility(View.VISIBLE);
+        }else {
+            iconView.setVisibility(View.GONE);
+        }
+        //set colors on the text Container for each category
+        View textContainer=listItemView.findViewById(R.id.textContainer);
+        int color= ContextCompat.getColor((getContext()),mColourResourceID);
+        textContainer.setBackgroundColor(color);
+
 
         // Return the whole list item layout (containing 2 TextViews and an ImageView)
         // so that it can be shown in the ListView

@@ -32,7 +32,7 @@ public class Numbers extends AppCompatActivity {
 
 
         WordAdapter adapter=
-                new WordAdapter(this,listOfNumbers);
+                new WordAdapter(this,listOfNumbers,R.color.category_numbers);
         listView.setAdapter(adapter);
 
     }

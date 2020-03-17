@@ -34,7 +34,7 @@ public class Colors extends AppCompatActivity {
 
 
         WordAdapter adapter=
-                new WordAdapter(this,listOfNumbers);
+                new WordAdapter(this,listOfNumbers,R.color.category_colors);
         listView.setAdapter(adapter);
 
     }
