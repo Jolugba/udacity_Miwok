@@ -11,6 +11,11 @@ public class Word {
     /**Miwok translation for the word*/
     private String mMiworkTranslation;
 
+
+    /**Miwok Audio resource for the word*/
+    private int mAudioResource;
+
+
     /**Image Resources for differnt categories*/
     private int mImageResources=NO_IMAGE_PROVIDED;
 
@@ -18,15 +23,18 @@ public class Word {
     private final static int NO_IMAGE_PROVIDED=-1 ;
 
 
-    public Word(String mdefaultTranslation, String mMiworkTranslation) {
+    public Word(String mdefaultTranslation, String mMiworkTranslation,int mAudioResource) {
         this.mdefaultTranslation = mdefaultTranslation;
         this.mMiworkTranslation = mMiworkTranslation;
+        this.mAudioResource=mAudioResource;
     }
 
-    public Word(int mImageResources, String mdefaultTranslation, String mMiworkTranslation) {
+    public Word(int mImageResources, String mdefaultTranslation, String mMiworkTranslation,int mAudioResource) {
         this.mImageResources=mImageResources;
         this.mdefaultTranslation = mdefaultTranslation;
-        this.mMiworkTranslation = mMiworkTranslation;}
+        this.mMiworkTranslation = mMiworkTranslation;
+        this.mAudioResource=mAudioResource;
+    }
 
 
 
@@ -45,5 +53,9 @@ public class Word {
     }
     public boolean hasImage(){
         return mImageResources!=NO_IMAGE_PROVIDED;
+    }
+
+    public int getmAudioResource() {
+        return mAudioResource;
     }
 }
