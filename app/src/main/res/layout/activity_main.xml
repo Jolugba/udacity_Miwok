@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@color/tan_background"
+    android:orientation="vertical"
     tools:context=".MainActivity">
     <!-- Numbers category -->
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/category_numbers">
+
         <TextView
             android:id="@+id/numbers"
             style="@style/CategoryStyle"
@@ -24,6 +24,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/category_family">
+
         <TextView
             android:id="@+id/family"
             style="@style/CategoryStyle"
@@ -36,6 +37,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/category_colors">
+
         <TextView
             android:id="@+id/colors"
             style="@style/CategoryStyle"
@@ -48,6 +50,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/category_phrases">
+
         <TextView
             android:id="@+id/phrases"
             style="@style/CategoryStyle"
